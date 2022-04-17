@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sidenav',
+    loadChildren: () => import('./sidenav/sidenav.module').then( m => m.SidenavPageModule)
+  },
 ];
 
 @NgModule({
