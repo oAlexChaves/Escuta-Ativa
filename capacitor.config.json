@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Escuta-Ativa",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

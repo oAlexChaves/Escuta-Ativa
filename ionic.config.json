@@ -1,0 +1,7 @@
+{
+  "name": "Escuta-Ativa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
