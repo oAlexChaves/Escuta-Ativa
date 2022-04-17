@@ -5,8 +5,24 @@ import { SidenavPage } from './sidenav.page';
 
 const routes: Routes = [
   {
+    path: 'nav',
+    component: SidenavPage,
+    children: [
+      {
+        path: 'about',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+      },
+      {
+        path: '',
+        redirectTo: '/nav/about',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
     path: '',
-    component: SidenavPage
+    redirectTo: '/nav/about',
+    pathMatch: 'full'
   }
 ];
 
@@ -14,4 +30,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+
 export class SidenavPageRoutingModule {}
