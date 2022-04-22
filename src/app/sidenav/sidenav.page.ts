@@ -14,20 +14,25 @@ export class SidenavPage implements OnInit {
 
   NAV = [
     {
-      name: 'About',
-      link: '/nav/about',
-      icon: 'person-circle'
+      name: 'consultorios proximos',
+      link: '/agenda-de-consultas',
+      icon: 'location'
     },
     {
-      name: 'Blog',
+      name: 'procurar consultas',
       link: '/nav/blog',
-      icon: 'albums'
+      icon: 'search'
     },
     {
-      name: 'Contact',
+      name: 'agenda de consultas',
       link: '/nav/contact',
-      icon: 'call'
-    }
+      icon: 'journal'
+    },
+    {
+      name: 'ficha financeira',
+      link: '/nav/contact',
+      icon: 'reader'
+    },
   ]
 
   constructor(private router: Router) {

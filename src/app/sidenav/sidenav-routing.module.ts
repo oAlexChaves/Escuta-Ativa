@@ -9,19 +9,23 @@ const routes: Routes = [
     component: SidenavPage,
     children: [
       {
-        path: 'about',
+        path: 'home',
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
         path: '',
-        redirectTo: '/nav/about',
+        loadChildren: () => import('../agenda-de-consultas/agenda-de-consultas.module').then(m => m.AgendaDeConsultasPageModule)
+      },
+      {
+        path: '',
+        redirectTo: '/nav/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/nav/about',
+    redirectTo: '/nav/home',
     pathMatch: 'full'
   }
 ];
